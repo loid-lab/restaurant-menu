@@ -111,7 +111,53 @@ The application will be available at `http://localhost:8080`.
 
 ## 📝 API Endpoints
 
-(To be documented)
+Here is a list of the available API endpoints:
+
+### Authentication
+
+- `POST /auth/signup`: Register a new user.
+- `POST /auth/login`: Login and receive a JWT.
+
+### User
+
+- `GET /user/profile`: Get the current user's profile.
+
+### Menu Items
+
+- `GET /menu-items`: Get all menu items.
+- `GET /menu-items/:id`: Get a single menu item by ID.
+- `POST /menu-items`: Create a new menu item (Staff/Admin only).
+- `PUT /menu-items/:id`: Update a menu item (Staff/Admin only).
+- `DELETE /menu-items/:id`: Delete a menu item (Staff/Admin only).
+
+### Cart
+
+- `GET /cart`: Get the current user's cart.
+- `POST /cart`: Add an item to the cart.
+- `DELETE /cart/:id`: Remove an item from the cart.
+
+### Orders
+
+- `GET /orders`: Get all orders for the current user.
+- `GET /orders/:id`: Get a single order by ID.
+- `POST /orders`: Create a new order.
+
+### Payments
+
+- `POST /orders/:id/pay`: Create a Stripe checkout session for an order.
+
+### Invoices
+
+- `GET /invoices`: Get all invoices (Admin only).
+
+### Sales
+
+- `GET /sales/metrics`: Get sales metrics (Admin only).
+- `GET /sales/stats`: Get order statistics (Admin only).
+
+### Webhooks
+
+- `POST /webhooks/stripe`: Stripe webhook for payment updates.
 
 ---
 
